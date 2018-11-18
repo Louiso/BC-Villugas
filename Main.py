@@ -19,6 +19,7 @@ class Ventana(tk.Frame):
             text = 'Caninos',
             x = 100,
             y = 120,
+            """ MODIFICAR ESTE ARRAY SIMPLE CON UNA ARRAY DE OBJETOS ANIMALES """
             data = ['perro','lobo','can']
         )
         
@@ -59,6 +60,7 @@ class Ventana(tk.Frame):
     
     def handleListBoxSelect(self,e,data):
         index = self.listBox.curselection()[0]
+        """ AQUI DEBE SER MODIFICADO PARA FUNCIONAR BN CON OBJETOS ANIMALES """
         self.detalles.setDescription(text = data[index])
         self.detalles.place(x = 280, y = 160)
 
