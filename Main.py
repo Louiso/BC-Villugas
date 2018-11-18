@@ -1,13 +1,45 @@
 import tkinter as tk
-from components.Button import Button
+from components.ClaseBiologia import ClaseBiologia
+
 class Ventana(tk.Frame):
     def __init__(self,root = None):
         super().__init__(root , width = 800 , height = 600 )
         self.root = root
-        self.config(cursor = 'spider', bg = 'green')
+        self.config(bg = 'gray10')
         self.pack()
-        boton = Button( root = self, text='Spider', file = "arana.png", width = 100, height = 100)
-        boton.place(x = 20, y = 20)
+
+        caninos = ClaseBiologia(
+            root = self,
+            file = 'mastin.png',
+            text = 'Caninos',
+            x = 100,
+            y = 120
+        )
+        
+        aracnidos = ClaseBiologia(
+            root = self,
+            file = 'arana.png',
+            text = 'Aracnidos',
+            x = 580,
+            y = 120
+        )
+
+        aves = ClaseBiologia(
+            root = self,
+            file = 'loros.png',
+            text = 'Aves',
+            x = 100,
+            y = 330
+        )
+        
+        pez = ClaseBiologia(
+            root = self,
+            file = 'pez.png',
+            text = 'Peces',
+            x = 580,
+            y = 330
+        )
+
 
 
 root = tk.Tk()
