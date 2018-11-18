@@ -9,38 +9,18 @@ miFrame.config(cursor="spider",bg="green") #Configuración del marco
 
 miFrame.pack()
 
-
-#m1=PhotoImage(file="Kid_goku_small.png")
-#boton1.config(image=m1,compound=RIGHT)
-#tmi=m1.subsample(4,4)
-#boton1.config(image=tmi)
 def  mostrar():
-	  #print(varOpcion.get())
-	  
-      """ Eliminando el nodo 2 """
-      #lstMaterias.delete(2)
-      lst1.place(x=290,y=150)
-      boton6.place(x=310,y=340)	 
+   lst1.place(x=290,y=150)
+   boton6.place(x=310,y=340)	   
 
 
 def  mostrar2():
-	  #print(varOpcion.get())
-	  
-      """ Eliminando el nodo 2 """
-      #lstMaterias.delete(2)
-      lst2.place(x=290,y=150)
+   lst2.place(x=290,y=150)
+
 def  mostrar3():
-	  #print(varOpcion.get())
-	  
-      """ Eliminando el nodo 2 """
-      #lstMaterias.delete(2)
-      lst3.place(x=290,y=150)
+   lst3.place(x=290,y=150)
 def  mostrar4():
-	  #print(varOpcion.get())
-	  
-      """ Eliminando el nodo 2 """
-      #lstMaterias.delete(2)
-      lst4.place(x=290,y=150)
+   lst4.place(x=290,y=150)
 
 
 def f(indice,root):
@@ -116,24 +96,26 @@ lst1.insert(0,"lobo")
 lst1.insert(1,"can")
 lst1.insert(2,"asd")
 lst1.insert(3,"name 4")
+
 lst2=Listbox(miFrame,width=20)
 lst2.insert(0,"paloma")
 lst2.insert(1,"aveztrus")
 lst2.insert(2,"name 3")
 lst2.insert(3,"name 4")
+
 lst3=Listbox(miFrame,width=20)
 lst3.insert(0,"araña")
 lst3.insert(1,"tarantula")
 lst3.insert(2,"name 3")
 lst3.insert(3,"name 4")
+
 lst4=Listbox(miFrame,width=20)
 lst4.insert(0,"ballena")
 lst4.insert(1,"orca")
 lst4.insert(2,"bonito")
 lst4.insert(3,"name 4")
+
 def handleSelectElementList(event):
-    """ lstMaterias.get() devuelve el valor dentro de la lista"""
-    """ lstMaterias.curselection ... devuelve el indice del elemento seleccionado """
     indice = lst1.curselection()[0]
     f(indice,root)
 
