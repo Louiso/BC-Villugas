@@ -53,20 +53,17 @@ class Ventana(tk.Frame):
 
     def handleClickImage(self,e,data):
         self.listBox.delete(0,tk.END)
+        self.listBox.data = data
         for element in data:
             self.listBox.insert(tk.END,element)
     
-    def handleListBoxSelect(self,e):
+    def handleListBoxSelect(self,e,data):
         index = self.listBox.curselection()[0]
-        self.detalles.setDescription(text = "Sera")
+        self.detalles.setDescription(text = data[index])
         self.detalles.place(x = 280, y = 160)
 
     def handleBackDetalles(self,e):
         self.detalles.place_forget()
-
-
-        
-
 
 root = tk.Tk()
 root.title("BC Proyecto de Ciro de Mrd")

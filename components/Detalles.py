@@ -11,10 +11,10 @@ class Detalles(tk.Frame):
         self.body = tk.Frame(self)
         self.body.config(width = 248, height = 244)
         self.body.pack( side = tk.BOTTOM )
-        self.descripcion = tk.Text(self.body)
-        self.descripcion.insert(tk.INSERT,text)
 
+        self.descripcion = tk.Text(self.body)
         self.descripcion.config(width = 35, height = 18)
+        self.descripcion.insert(tk.INSERT,text)
         self.descripcion.place(x = 0, y = 0)
 
         self.button = tk.Button(self.body, text = 'Back')
