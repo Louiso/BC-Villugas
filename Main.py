@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import ttk
 from components.ClaseBiologia import ClaseBiologia
 from components.ListBox import ListBox
 from components.Detalles import Detalles
@@ -73,6 +74,12 @@ class Ventana(tk.Frame):
 root = tk.Tk()
 root.title("BC Proyecto de Ciro de Mrd")
 
+windows = ttk.Notebook(root)
+windows.pack(fill = 'both', expand = 'yes')
+pestaña1 = Ventana(root = root)
+pestaña2 = Ventana(root = root)
 
-app = Ventana(root = root)
-app.mainloop()
+windows.add(pestaña1, text = "Pestaña 1")
+windows.add(pestaña2, text = "Pestaña 2")
+
+root.mainloop()

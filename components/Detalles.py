@@ -17,11 +17,10 @@ class Detalles(tk.Frame):
         
         """ FOTO DEL ANIMAL """
         print(objeto.urlImage)
-        self.labelPhoto = tk.Label(self)
         self.photo = tk.PhotoImage(file = objeto.urlImage)
         self.photo = resize( self.photo, 80 , 80 )
 
-        self.labelPhoto = tk.Label(self, image = self.photo, bg = grisOscuro)
+        self.labelPhoto = tk.Label(self.body, image = self.photo, bg = grisOscuro)
         self.labelPhoto.place(x = 0 , y = 0)
 
         self.descripcion = tk.Text(self.body)
@@ -36,8 +35,8 @@ class Detalles(tk.Frame):
     def setDescription(self,objeto = Animal()):
         print(objeto.urlImage)
         self.photo = tk.PhotoImage(file = objeto.urlImage)
-        self.photo = resize( self.photo, 120 , 120 )
-        self.labelPhoto = tk.Label(self, image = self.photo,bg = grisOscuro)
+        self.photo = resize( self.photo, 80 , 80 )
+        self.labelPhoto.config(image = self.photo)
         self.labelPhoto.place(x = 80, y = 10 )
         self.descripcion.delete('1.0',tk.END)
         self.descripcion.insert(tk.INSERT,objeto.descripcion)
