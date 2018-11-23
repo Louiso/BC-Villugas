@@ -3,6 +3,10 @@ from components.ClaseBiologia import ClaseBiologia
 from components.ListBox import ListBox
 from components.Detalles import Detalles
 from helpers.colors import grisOscuro
+from models.Animal import Animal
+
+perro = Animal(descripcion='Este es perro', urlImage='./perro_1.png')
+
 
 class Ventana(tk.Frame):
     def __init__(self,root = None):
@@ -11,7 +15,7 @@ class Ventana(tk.Frame):
         self.config(bg = grisOscuro)
         self.pack()
 
-
+        """ MODIFICAR ESTE ARRAY SIMPLE CON UNA ARRAY DE OBJETOS ANIMALES """
         self.listBox = ListBox(self)
         self.caninos = ClaseBiologia(
             root = self,
@@ -19,8 +23,7 @@ class Ventana(tk.Frame):
             text = 'Caninos',
             x = 100,
             y = 120,
-            """ MODIFICAR ESTE ARRAY SIMPLE CON UNA ARRAY DE OBJETOS ANIMALES """
-            data = ['perro','lobo','can']
+            data = [perro,perro,perro]
         )
         
         self.aracnidos = ClaseBiologia(
@@ -29,7 +32,7 @@ class Ventana(tk.Frame):
             text = 'Aracnidos',
             x = 580,
             y = 120,
-            data = ['arana','viuda negra','charlotte']
+            data = [perro,perro,perro]
         )
 
         self.aves = ClaseBiologia(
@@ -38,7 +41,7 @@ class Ventana(tk.Frame):
             text = 'Aves',
             x = 100,
             y = 330,
-            data = ['tucan','gallito de las rocas','ella no te ama >:v']
+            data = [perro,perro,perro]
         )
         
         self.pez = ClaseBiologia(
@@ -47,7 +50,7 @@ class Ventana(tk.Frame):
             text = 'Peces',
             x = 580,
             y = 330,
-            data = ['pez globo','trucha','campeon del ACM :)']
+            data = [perro,perro,perro]
         )
 
         self.detalles = Detalles(root = self)
@@ -56,12 +59,12 @@ class Ventana(tk.Frame):
         self.listBox.delete(0,tk.END)
         self.listBox.data = data
         for element in data:
-            self.listBox.insert(tk.END,element)
+            self.listBox.insert(tk.END,element.descripcion)
     
     def handleListBoxSelect(self,e,data):
         index = self.listBox.curselection()[0]
         """ AQUI DEBE SER MODIFICADO PARA FUNCIONAR BN CON OBJETOS ANIMALES """
-        self.detalles.setDescription(text = data[index])
+        self.detalles.setDescription(objeto= data[index])
         self.detalles.place(x = 280, y = 160)
 
     def handleBackDetalles(self,e):

@@ -1,7 +1,10 @@
 import tkinter as tk
 
+from models.Animal import Animal
+from helpers.helpers import resize
+from helpers.colors import grisOscuro
 class Detalles(tk.Frame):
-    def __init__(self, root = None, text = 'Vacio'):
+    def __init__(self, root = None, objeto = Animal()):
         super().__init__(root)
 
         self.label = tk.Label(self, text = 'Detalles')
@@ -12,19 +15,29 @@ class Detalles(tk.Frame):
         self.body.config(width = 248, height = 244)
         self.body.pack( side = tk.BOTTOM )
         
-        """ AQUI AGREGUEN LA FOTO QUE PIDEN """
+        """ FOTO DEL ANIMAL """
+        print(objeto.urlImage)
         self.labelPhoto = tk.Label(self)
-        # self.labelPhoto.config()
+        self.photo = tk.PhotoImage(file = objeto.urlImage)
+        self.photo = resize( self.photo, 80 , 80 )
+
+        self.labelPhoto = tk.Label(self, image = self.photo, bg = grisOscuro)
+        self.labelPhoto.place(x = 0 , y = 0)
 
         self.descripcion = tk.Text(self.body)
-        self.descripcion.config(width = 35, height = 18)
-        self.descripcion.insert(tk.INSERT,text)
-        self.descripcion.place(x = 0, y = 0)
+        self.descripcion.config(width = 35, height = 9)
+        self.descripcion.insert(tk.INSERT,objeto.descripcion)
+        self.descripcion.place(x = 0, y = 100)
 #################################################################################################
         self.button = tk.Button(self.body, text = 'Back')
         self.button.place(x = 100, y = 210)
         self.button.bind('<Button-1>', lambda e: root.handleBackDetalles(e))
 
-    def setDescription(self,text = ''):
+    def setDescription(self,objeto = Animal()):
+        print(objeto.urlImage)
+        self.photo = tk.PhotoImage(file = objeto.urlImage)
+        self.photo = resize( self.photo, 120 , 120 )
+        self.labelPhoto = tk.Label(self, image = self.photo,bg = grisOscuro)
+        self.labelPhoto.place(x = 80, y = 10 )
         self.descripcion.delete('1.0',tk.END)
-        self.descripcion.insert(tk.INSERT,text)
+        self.descripcion.insert(tk.INSERT,objeto.descripcion)
