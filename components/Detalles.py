@@ -16,7 +16,6 @@ class Detalles(tk.Frame):
         self.body.pack( side = tk.BOTTOM )
         
         """ FOTO DEL ANIMAL """
-        print(objeto.urlImage)
         self.photo = tk.PhotoImage(file = objeto.urlImage)
         self.photo = resize( self.photo, 80 , 80 )
 
