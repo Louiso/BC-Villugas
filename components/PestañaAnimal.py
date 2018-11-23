@@ -7,13 +7,13 @@ from components.ClaseBiologia import ClaseBiologia
 
 
 perro = Animal(descripcion='Este es perro', urlImage='./perro_1.png')
-
+vaca = "Es una especie de marsopa (delfines pequenos), es una especie endemica que actualmente se encuentra en peligro de extincion su habitat es el golfo de California y la peninsula baja de California."
 
 data = [
     Animal(
-        name='Loro',
-        descripcion='Texto de descripcion del animal Loro',
-        urlImage='./loros.png'),
+        name='Vaquita Marina',
+        descripcion=vaca,
+        urlImage='./vaca.png'),
     Animal(
         name='Perro',
         descripcion='Texto de descripcion del animal Perro',
