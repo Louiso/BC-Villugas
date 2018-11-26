@@ -1,6 +1,7 @@
 import tkinter as tk
 from components.ListBox import ListBox
-from components.Detalles import Detalles
+from components.detallesA import detallesA
+from components.boton import Boton
 from helpers.colors import grisOscuro
 from models.Animal import Animal
 from components.ClaseAnalisis import ClaseAnalisis
@@ -9,84 +10,100 @@ data = [
     Animal(
         name='Vaquita Marina',
         descripcion="vaca",
-        urlImage='./img/vaca.png'),
+        urlImage='./img/vaca.png',
+        proteina = "Rodopsina"),
     Animal(
         name='Perro',
         descripcion='Texto de descripcion del animal Perro',
-        urlImage='./img/mastin.png'
+        urlImage='./img/mastin.png',
+        proteina = "Rodopsina"
     ),
 ]
 data2 = [
     Animal(
         name='Petirrojo europeo (Erithacus rubecula)',
         descripcion="vaca",
-        urlImage='./img/petirrojo1.png'),
+        urlImage='./img/petirrojo1.png',
+        proteina = "Cry4"),
     Animal(
         name='Gorrión común (Passer domesticus)',
         descripcion="gorrion",
-        urlImage='./img/gorrion1.png'
+        urlImage='./img/gorrion1.png',
+        proteina = "Cry4"
     ),
      Animal(
         name='Paloma Bravía (Columba livia)',
         descripcion="paloma",
-        urlImage='./img/paloma1.png'),
+        urlImage='./img/paloma1.png',
+        proteina = "Cry4"),
       Animal(
         name='Gallo Bankiva (Gallus gallus)',
         descripcion="gallo",
-        urlImage='./img/gallo1.png'),
+        urlImage='./img/gallo1.png',
+        proteina = "Cry4"),
       Animal(
         name='Curruca Mosquitera  (Sylvia borin)',
         descripcion="ave",
-        urlImage='./img/sylvia1.png'),      
-        
+        urlImage='./img/sylvia1.png',
+        proteina = "Cry4"),      
 ]
 
 Cetaceos = [
     Animal(
         name="Vaquita Marina",
         descripcion="vaca",
-        urlImage='./img/vacaMarina.png'),
+        urlImage='./img/vacaMarina.png',
+        proteina = "Tmie"
+        ),
     Animal(
         name='Delfin Nariz de Botella',
         descripcion="delfinBot",
-        urlImage='./img/botella.png'
+        urlImage='./img/botella.png',
+        proteina = "Tmie"
     ),
      Animal(
         name='Orca',
         descripcion="orca",
-        urlImage='./img/orca.png'),
+        urlImage='./img/orca.png',
+        proteina = "Tmie"),
       Animal(
         name='Ballena Minke',
         descripcion="BallenasMinke",
-        urlImage='./img/minke.png'),
+        urlImage='./img/minke.png',
+        proteina = "Tmie"),
       Animal(
         name='Cachalote',
         descripcion="Cachalote",
-        urlImage='./img/cachalote.png'),              
+        urlImage='./img/cachalote.png',
+        proteina = "Tmie"),              
 ]
 
 insectos = [
     Animal(
         name="Garrapata",
         descripcion="Garrapata",
-        urlImage='./img/garrapata.png'),
+        urlImage='./img/garrapata.png',
+        proteina = "Cytochrome"),
     Animal(
         name='Escorpion',
         descripcion="Escorpion",
-        urlImage='./img/escorpion.png'
-    ),
+        urlImage='./img/escorpion.png',
+        proteina = "Cytochrome"),
      Animal(
         name='Arana',
         descripcion="Arana",
-        urlImage='./img/arana2.png'),
+        urlImage='./img/arana2.png',
+        proteina = "Cytochrome"),
       Animal(
         name='Alacran',
         descripcion="alacran",
-        urlImage='./img/alacran.png'),
+        urlImage='./img/alacran.png',
+        proteina = "Cytochrome"),
       Animal(
         name='Tarantula Cebra de Costa',
         descripcion="Tarantula",
-        urlImage='./img/tarantula.png'),              
+        urlImage='./img/tarantula.png',
+        proteina = "Cytochrome"),              
 ]
 
 class PestañaAnalisis(tk.Frame):
@@ -96,12 +113,12 @@ class PestañaAnalisis(tk.Frame):
         self.config(bg = grisOscuro)
         self.pack()
 
-        self.title = tk.Label(self, text = 'CIRO DE MRD >:v')
+        self.title = tk.Label(self, text = 'No tenemos Nombre')
         self.title.config(anchor = tk.CENTER, pady= 20, bg = grisOscuro, font= 1, fg = 'white', width = 80)
         self.title.place(x = 0 , y = 0)
 
         """ MODIFICAR ESTE ARRAY SIMPLE CON UNA ARRAY DE OBJETOS ANIMALES """
-        self.listBox = ListBox(self,w = 30, h = 20 ,px=43,py=250)
+        self.listBox = ListBox(self,w = 26, h = 20 ,px=43,py=250)
         #self.fasta = 
         self.caninos = ClaseAnalisis(
             root = self,
@@ -109,7 +126,7 @@ class PestañaAnalisis(tk.Frame):
             text = 'Caninos',
             x = 55,
             y = 80,
-            data = data
+            data = data,
         )
         
         self.aracnidos = ClaseAnalisis(
@@ -118,7 +135,7 @@ class PestañaAnalisis(tk.Frame):
             text = 'Aracnidos',
             x = 255,
             y = 80,
-            data = insectos
+            data = insectos,
         )
 
         self.aves = ClaseAnalisis(
@@ -127,7 +144,7 @@ class PestañaAnalisis(tk.Frame):
             text = 'Aves',
             x = 455,
             y = 80,
-            data = data2
+            data = data2,
         )
         
         self.pez = ClaseAnalisis(
@@ -136,10 +153,13 @@ class PestañaAnalisis(tk.Frame):
             text = 'Cetaceos',
             x = 655,
             y = 80,
-            data = Cetaceos
+            data = Cetaceos,
         )
 
-        self.detalles = Detalles(root = self)
+        self.detalles = detallesA(root = self)
+
+        self.alineamiento = Boton(root = self,text="Alineamiento", x = 150,y = 540)
+        self.arbol = Boton(root = self,text = "Arbol", x = 450,y = 540)
 
     def handleClickImage(self,e,data):
         self.listBox.delete(0,tk.END)
@@ -149,9 +169,9 @@ class PestañaAnalisis(tk.Frame):
     
     def handleListBoxSelect(self,e,data):
         index = self.listBox.curselection()[0]
-        """ AQUI DEBE SER MODIFICADO PARA FUNCIONAR BN CON OBJETOS ANIMALES """
+        self.detalles.nom(objeto= data[index])
         self.detalles.setDescription(objeto= data[index])
-        self.detalles.place(x = 242, y = 120)
+        self.detalles.place(x = 245, y = 250)        
 
     def handleBackDetalles(self,e):
         self.detalles.place_forget()

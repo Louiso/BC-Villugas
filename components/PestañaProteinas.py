@@ -49,7 +49,7 @@ class PestañaProteinas(tk.Frame):
         self.config(bg = grisOscuro)
         self.pack()
 
-        self.title = tk.Label(self, text = 'CIRO DE MRD >:v')
+        self.title = tk.Label(self, text = 'No tenemos Nombre')
         self.title.config(anchor = tk.CENTER, pady= 20, bg = grisOscuro, font= 1, fg = 'white', width = 80)
         self.title.place(x = 0 , y = 0)
 

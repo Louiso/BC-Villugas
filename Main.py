@@ -5,7 +5,7 @@ from components.PestañaProteinas import PestañaProteinas
 from components.PestañaAnalisis import PestañaAnalisis
 
 root = tk.Tk()
-root.title("Ciro de MRD ... te voy a sacar la MRD")
+root.title("Biologia Computacional")
 
 windows = ttk.Notebook(root)
 windows.pack(fill = 'both', expand = 'yes')

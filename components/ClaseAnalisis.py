@@ -16,7 +16,6 @@ class ClaseAnalisis(tk.Frame):
         super().__init__(root)
         
         self.data = data
-
         width = 80
         height = 80
         
