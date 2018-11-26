@@ -18,7 +18,6 @@ data = [
         )
     
 ]
-
 data2 = [
     Proteina(
         name='Tmie',
