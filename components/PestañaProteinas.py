@@ -58,7 +58,7 @@ class PestañaProteinas(tk.Frame):
         self.listBox = ListBox(self)
         self.caninos = ClaseBiologia(
             root = self,
-            file = 'cry41.png',
+            file = './img/cry41.png',
             text = 'CRY4',
             x = 100,
             y = 120,
@@ -67,7 +67,7 @@ class PestañaProteinas(tk.Frame):
         
         self.aracnidos = ClaseBiologia(
             root = self,
-            file = 'rodopsina.png',
+            file = './img/rodopsina.png',
             text = 'Rodopsina',
             x = 580,
             y = 120,
@@ -76,7 +76,7 @@ class PestañaProteinas(tk.Frame):
 
         self.aves = ClaseBiologia(
             root = self,
-            file = 'nariz1.png',
+            file = './img/nariz1.png',
             text = 'Cytochrome',
             x = 100,
             y = 330,
@@ -85,7 +85,7 @@ class PestañaProteinas(tk.Frame):
         
         self.pez = ClaseBiologia(
             root = self,
-            file = 'oido1.png',
+            file = './img/oido1.png',
             text = 'Tmie',
             x = 580,
             y = 330,

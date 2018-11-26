@@ -6,7 +6,7 @@ from models.Animal import Animal
 from components.ClaseBiologia import ClaseBiologia
 
 
-perro = Animal(descripcion='Este es perro', urlImage='./perro_1.png')
+perro = Animal(descripcion='Este es perro', urlImage='./img/perro_1.png')
 
 vaca = "Es una especie de marsopa (delfines pequenos), es una especie endemica que actualmente se encuentra en peligro de extincion su habitat es el golfo de California y la peninsula baja de California."
 delfinBot = "El delfin mular o de nariz de botella, de la familia Delphinidae. De las mas de 30 especies de delfines que existen, es la mas comun y mas conocida de la familia."
@@ -30,35 +30,35 @@ data = [
     Animal(
         name='Vaquita Marina',
         descripcion=vaca,
-        urlImage='./vaca.png'),
+        urlImage='./img/vaca.png'),
     Animal(
         name='Perro',
         descripcion='Texto de descripcion del animal Perro',
-        urlImage='./mastin.png'
+        urlImage='./img/mastin.png'
     ),
 ]
 data2 = [
     Animal(
         name='Petirrojo europeo (Erithacus rubecula)',
         descripcion=vaca,
-        urlImage='./petirrojo1.png'),
+        urlImage='./img/petirrojo1.png'),
     Animal(
         name='Gorrión común (Passer domesticus)',
         descripcion=gorrion,
-        urlImage='./gorrion1.png'
+        urlImage='./img/gorrion1.png'
     ),
      Animal(
         name='Paloma Bravía (Columba livia)',
         descripcion=paloma,
-        urlImage='./paloma1.png'),
+        urlImage='./img/paloma1.png'),
       Animal(
         name='Gallo Bankiva (Gallus gallus)',
         descripcion=gallo,
-        urlImage='./gallo1.png'),
+        urlImage='./img/gallo1.png'),
       Animal(
         name='Curruca Mosquitera  (Sylvia borin)',
         descripcion=ave,
-        urlImage='./sylvia1.png'),      
+        urlImage='./img/sylvia1.png'),      
         
 ]
 
@@ -66,48 +66,48 @@ Cetaceos = [
     Animal(
         name="Vaquita Marina",
         descripcion=vaca,
-        urlImage='./vacaMarina.png'),
+        urlImage='./img/vacaMarina.png'),
     Animal(
         name='Delfin Nariz de Botella',
         descripcion=delfinBot,
-        urlImage='./botella.png'
+        urlImage='./img/botella.png'
     ),
      Animal(
         name='Orca',
         descripcion=orca,
-        urlImage='./orca.png'),
+        urlImage='./img/orca.png'),
       Animal(
         name='Ballena Minke',
         descripcion=BallenasMinke,
-        urlImage='./minke.png'),
+        urlImage='./img/minke.png'),
       Animal(
         name='Cachalote',
         descripcion=Cachalote,
-        urlImage='./cachalote.png'),              
+        urlImage='./img/cachalote.png'),              
 ]
 
 insectos = [
     Animal(
         name="Garrapata",
         descripcion=Garrapata,
-        urlImage='./garrapata.png'),
+        urlImage='./img/garrapata.png'),
     Animal(
         name='Escorpion',
         descripcion=Escorpion,
-        urlImage='./escorpion.png'
+        urlImage='./img/escorpion.png'
     ),
      Animal(
         name='Arana',
         descripcion=Arana,
-        urlImage='./arana2.png'),
+        urlImage='./img/arana2.png'),
       Animal(
         name='Alacran',
         descripcion=alacran,
-        urlImage='./alacran.png'),
+        urlImage='./img/alacran.png'),
       Animal(
         name='Tarantula Cebra de Costa',
         descripcion=Tarantula,
-        urlImage='./tarantula.png'),              
+        urlImage='./img/tarantula.png'),              
 ]
 
 class PestañaAnimal(tk.Frame):
@@ -125,7 +125,7 @@ class PestañaAnimal(tk.Frame):
         self.listBox = ListBox(self)
         self.caninos = ClaseBiologia(
             root = self,
-            file = 'mastin.png',
+            file = './img/mastin.png',
             text = 'Caninos',
             x = 100,
             y = 120,
@@ -134,7 +134,7 @@ class PestañaAnimal(tk.Frame):
         
         self.aracnidos = ClaseBiologia(
             root = self,
-            file = 'arana.png',
+            file = './img/arana.png',
             text = 'Aracnidos',
             x = 580,
             y = 120,
@@ -143,7 +143,7 @@ class PestañaAnimal(tk.Frame):
 
         self.aves = ClaseBiologia(
             root = self,
-            file = 'loros.png',
+            file = './img/loros.png',
             text = 'Aves',
             x = 100,
             y = 330,
@@ -152,7 +152,7 @@ class PestañaAnimal(tk.Frame):
         
         self.pez = ClaseBiologia(
             root = self,
-            file = 'pez.png',
+            file = './img/pez.png',
             text = 'Cetaceos',
             x = 580,
             y = 330,
