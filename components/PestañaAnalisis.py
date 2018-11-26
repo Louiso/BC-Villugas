@@ -11,12 +11,14 @@ data = [
         name='Vaquita Marina',
         descripcion="vaca",
         urlImage='./img/vaca.png',
-        proteina = "Rodopsina"),
+        proteina = "Rodopsina",
+        fasta=""),
     Animal(
         name='Perro',
         descripcion='Texto de descripcion del animal Perro',
         urlImage='./img/mastin.png',
-        proteina = "Rodopsina"
+        proteina = "Rodopsina",
+        fasta=""
     ),
 ]
 data2 = [
@@ -24,28 +26,33 @@ data2 = [
         name='Petirrojo europeo (Erithacus rubecula)',
         descripcion="vaca",
         urlImage='./img/petirrojo1.png',
-        proteina = "Cry4"),
+        proteina = "Cry4",
+        fasta = ">ATE87950.1 cryptochrome 4 [Erithacus rubecula] MLHRTIHLFRKELRLHDNPVLLAALQSSEALYPVYILDRAFLTSSMHIGALRWHFLLQSLEDLHKNLCQLGSCLLVIQGEYETVLRDHIQKWSITQVTLDAEMEPFYKEMEANIQCLGAELGFEVLSLGSHSLYDTQRILDINGGSPPLTYKRFLHILSLLGDPEVPVRNLTAEDFQRCSAPDPDLAECYRVPLPVDLKISPENLSPWRGGETEGLQRLEQHLTDQGWVASFTKPRTIPNSLLPSTTGLSPYFSMGCLSVRTFFYRLSNIYAQAKHHSLPPVSLQGQLLWREFFYTVASATPNFTQMAGNPICLQICWYKDAERLHKWKMAQTGFPWIDAIMTQLRQEGWIHHLARHAVACFLTRGDLWISWEEGMKVFEELLLDADYSINAGNWMWLSASAFFHQYTRIFCPVRFGKRTDPQGNYIRKYLPILKNFPSKYIYEPWTASEEEQKQAGCIIGRDYPFPMVNHKEASDHNLQLMRQVREEQHRTAQLTRDDADDPMEIKVKRDHTEENISKGKVARTTE"),
     Animal(
         name='Gorrión común (Passer domesticus)',
         descripcion="gorrion",
         urlImage='./img/gorrion1.png',
-        proteina = "Cry4"
+        proteina = "Cry4",
+        fasta = ">AAS72903.1 cryptochrome 4, partial [Passer domesticus]KGLRLHDNPVLLAALESSEALYPVYILDRAFLTSSMHIGALRWNFLLQSLEDLHKNLGQLGSCLLVIQGEYEIVLRDHIQKWNITQVTLDAEMEPFYKEMEANIQRLGVELGFEVFSLVSHSLYNTQRILDLNGGSPPLTYKRFLHILSLLGDPEVPVRNVTAEDFQRCRAPDPGLAECYRVPLPVDLKISPESLSPWRGGETEGLQRLERHLTDQGWVTSFTKPRTVPNSLLPSTTGLSPYFSMGCLSVRTFFYRLSNIYAQAKHHSLPPVSLQGQLLWREFFYTVASATPNFTQMAGNPICLQICWYKDAERLHKWKTAQTGFPWIDAIMTQLRQEGWIHHLARHAVACFLTRGDLW"
     ),
      Animal(
         name='Paloma Bravía (Columba livia)',
         descripcion="paloma",
         urlImage='./img/paloma1.png',
-        proteina = "Cry4"),
+        proteina = "Cry4",
+        fasta = ">ANT47196.1 cryptochrome 4 [Columba livia] MPHRTIHLFRKGLRLHDNPTLLAALESSETIYPVYVLDRRFLASAMHIGALRWHFLLQSLEDLHKNLSRLGARLLVIQGEYECVLRDHVQKWNITQVTLDAEMEPFYKEMEANIRRLGAELGFEVLSRVGHSLYDTKRILDLNGGSPPLTYKRFLHILSQLGDPEVPVRNLTAEDFQRCMSPEPGLAERYRVPVPADLEIPPQSLSPWTGGETEGLRRLEQHLTDQGWVANFTKPRTIPNSLLPSTTGLSPYFSMGCLSVRTFFHRLSNIYAQAKHHSLPPVSLQGQLLWREFFYTVASATQNFTQMAGNPICLQIHWYEDAERLHKWKTAQTGFPWIDAIMTQLRQEGWIHHLARHAVACFLTRGDLWISWEEGMKVFEELLLDADYSINAGNWMWLSASAFFHHYTRIFCPVRFGKRTDPEGQYIRKYLPVLKNFPTKYIYEPWTASEEEQRQAGCIIGRDYPFPMVNHKEASDRNLQLMRRVREEQRGTAQLTRDDADDPMEMKRDCSEENTARGKVARGRE"),
       Animal(
         name='Gallo Bankiva (Gallus gallus)',
         descripcion="gallo",
         urlImage='./img/gallo1.png',
-        proteina = "Cry4"),
+        proteina = "Cry4",
+        fasta = ">NP_001034685.1 cryptochrome 4 [Gallus gallus] MRHRTIHLFRKGLRLHDNPALLAALQSSEVVYPVYILDRAFMTSSMHIGALRWHFLLQSLEDLRSSLRQLGSCLLVIQGEYESVVRDHVQKWNITQVTLDAEMEPFYKEMEANIRGLGEELGFQVLSLMGHSLYNTQRILELNGGTPPLTYKRFLRILSLLGDPEVPVRNPTAEDFQRCSPPELGLAECYGVPLPTDLKIPPESISPWRGGESEGLQRLEQHLADQGWVASFTKPKTVPNSLLPSTTGLSPYFSTGCLSVRSFFYRLSNIYAQAKHHSLPPVSLQGQLLWREFFYTVASATPNFTKMAGNPICLQIRWYEDAERLHKWKTAQTGFPWIDAIMTQLRQEGWIHHLARHAAACFLTRGDLWISWEEGMKVFEELLLDADYSINAGNWMWLSASAFFHHYTRIFCPVRFGRRTDPEGQYIRKYLPILKNFPSKYIYEPWTASEEEQKQAGCIIGRDYPFPMVDHKEASDHNLQLMKQAREEQHRIAQLTRDDADDPMEMKLKRDHSEESFTKTKAARMTEQT"),
       Animal(
         name='Curruca Mosquitera  (Sylvia borin)',
         descripcion="ave",
         urlImage='./img/sylvia1.png',
-        proteina = "Cry4"),      
+        proteina = "Cry4",
+        fasta = ">NP_001034685.1 cryptochrome 4 [Gallus gallus] MRHRTIHLFRKGLRLHDNPALLAALQSSEVVYPVYILDRAFMTSSMHIGALRWHFLLQSLEDLRSSLRQLGSCLLVIQGEYESVVRDHVQKWNITQVTLDAEMEPFYKEMEANIRGLGEELGFQVLSLMGHSLYNTQRILELNGGTPPLTYKRFLRILSLLGDPEVPVRNPTAEDFQRCSPPELGLAECYGVPLPTDLKIPPESISPWRGGESEGLQRLEQHLADQGWVASFTKPKTVPNSLLPSTTGLSPYFSTGCLSVRSFFYRLSNIYAQAKHHSLPPVSLQGQLLWREFFYTVASATPNFTKMAGNPICLQIRWYEDAERLHKWKTAQTGFPWIDAIMTQLRQEGWIHHLARHAAACFLTRGDLWISWEEGMKVFEELLLDADYSINAGNWMWLSASAFFHHYTRIFCPVRFGRRTDPEGQYIRKYLPILKNFPSKYIYEPWTASEEEQKQAGCIIGRDYPFPMVDHKEASDHNLQLMKQAREEQHRIAQLTRDDADDPMEMKLKRDHSEESFTKTKAARMTEQT"),      
 ]
 
 Cetaceos = [
@@ -53,29 +60,34 @@ Cetaceos = [
         name="Vaquita Marina",
         descripcion="vaca",
         urlImage='./img/vacaMarina.png',
-        proteina = "Tmie"
+        proteina = "Tmie",
+        fasta = ">XP_019802190.1 PREDICTED: transmembrane inner ear expressed protein [Tursiops truncatus] MGMVLRRHLLWPLPSLLCFPVVITLCCVFNCRVPRTRKEIEARYLQRKAAKIYTDKLETVPPLDELTEVPGGDKKKKKKDSVDTVAIKVEEDEKNEAKKKKEEK"
         ),
     Animal(
         name='Delfin Nariz de Botella',
         descripcion="delfinBot",
         urlImage='./img/botella.png',
-        proteina = "Tmie"
+        proteina = "Tmie",
+        fasta = ">XP_004283908.1 PREDICTED: transmembrane inner ear expressed protein [Orcinus orca] MAGQRLGAGPLWALGGAALGVCLAGVAGQLVEPSTAPPKPKPPPLTKETVVFWDMRLWHVVGIFSLFVLSIIITLCCVFNCRVPRTRKEIEARYLQRKAAKIYTDKLETVPPLDELTEVPGGDKKKKKKDSVDTVAIKVEEDEKNEAKKKKEEK"
     ),
      Animal(
         name='Orca',
         descripcion="orca",
         urlImage='./img/orca.png',
-        proteina = "Tmie"),
+        proteina = "Tmie",
+        fasta = ">XP_007168911.1 PREDICTED: transmembrane inner ear expressed protein [Balaenoptera acutorostrata scammoni] MAGQRLGAGPLWALGGGAALGVCLAGVAGQLVEPSTAPPKPKPPPLTKETVVFWDMRLWHVVGIFSLFVLSIIITLCCVFNCRVPRTRKEIEARYLQRKAAKMYTDKLETVPPLNELTEIPGEDKKKKKKKDSVDTVAIKVEEDEKNEAKKKKEEK"),
       Animal(
         name='Ballena Minke',
         descripcion="BallenasMinke",
         urlImage='./img/minke.png',
-        proteina = "Tmie"),
+        proteina = "Tmie",
+        fasta = ">XP_007126150.2 transmembrane inner ear expressed protein [Physeter catodon] MMPTRSLPATRSPPPSAGWPGGSHRAKAARQASLGSPDLLPSCAERAKMAGQRLGAGPLWALGGAALGVCLAGVAGQLVEPSTAPPKPKPPPLTKETVVFWDMRLWHVVGIFSLFVLSIIITLCCVFNCRVPRTRKEIEARYLQRKAAKMYTDKLETVPPLNELTEIPGEGKKKKKKDSVDTVAIKVEEDEKNEAKKKKEGK"),
       Animal(
         name='Cachalote',
         descripcion="Cachalote",
         urlImage='./img/cachalote.png',
-        proteina = "Tmie"),              
+        proteina = "Tmie",
+        fasta = ">XP_010765930.1 PREDICTED: transmembrane inner ear expressed protein [Notothenia coriiceps] MFGDQPVCPSQPLLRGALLLSQCLSSVFSQVPDPELLPTDPPKKPDPITSESVVFWGLRLWQVIAIFSVFVLAIIITLCCIFKCRIPRTKKEIEARNVQRQAAKKYANTLETVPPLNELTEIPGSAPDASAVQTVSEQVQTQSATGSQLSIVRVSEEQPGSLTLPETG"),              
 ]
 
 insectos = [
@@ -83,27 +95,32 @@ insectos = [
         name="Garrapata",
         descripcion="Garrapata",
         urlImage='./img/garrapata.png',
-        proteina = "Cytochrome"),
+        proteina = "Cytochrome",
+        fasta = "fasta0"),
     Animal(
         name='Escorpion',
         descripcion="Escorpion",
         urlImage='./img/escorpion.png',
-        proteina = "Cytochrome"),
+        proteina = "Cytochrome",
+        fasta = "fasta1"),
      Animal(
         name='Arana',
         descripcion="Arana",
         urlImage='./img/arana2.png',
-        proteina = "Cytochrome"),
+        proteina = "Cytochrome",
+        fasta = "fasta2"),
       Animal(
         name='Alacran',
         descripcion="alacran",
         urlImage='./img/alacran.png',
-        proteina = "Cytochrome"),
+        proteina = "Cytochrome",
+        fasta = "fasta3"),
       Animal(
         name='Tarantula Cebra de Costa',
         descripcion="Tarantula",
         urlImage='./img/tarantula.png',
-        proteina = "Cytochrome"),              
+        proteina = "Cytochrome",
+        fasta = "fasta4"),              
 ]
 
 class PestañaAnalisis(tk.Frame):
