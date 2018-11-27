@@ -26,16 +26,35 @@ Arana = "Por regla general son animales solitarios y depredadores de pequeños i
 alacran = "Es frecuente encontrarlo en el campo y su picadura no es potente y a veces el aguijon ni siquiera traspasa la piel.Esta especie comprende a un aracnido de mediano a gran tamano, los adultos llegan a medir unos 60 mm de largo."
 Tarantula = "La tarantula cebra de Costa Rica o tarantula de rodillas rayadas (Aphonopelma seemanni), habita en la mayor parte del oeste de Costa Rica, asi como en otras partes de America Central, como Guatemala, Honduras y Nicaragua. "
 
+perro1 = "El canis lupus familiares llamado perro domestico o can, ​ es un mamifero carnivoro de la familia de los canidos , su tamano o talla, su forma y pelaje es muy diverso segun la raza. Posee un oido y olfato muy desarrollados, siendo este ultimo su principal organo sensorial."
+perro2 = "El zorro artico posee unas orejas pequenas y una capa densa de pelo que le permite subsistir y cazar a temperaturas extremas (de hasta -50 C). En el verano, esta capa blanca de pelaje largo cambia por una capa pardo-grisacea de pelaje mas corto."
+perro3 = "Eidera miembro de la misma especie segun distintos indicios , la secuencia del ADN y otros estudios geneticos.l lobo es una especie de mamifero placentario del orden de los carnivoros. El perro domestico se cons"
+perro4 = "Es un animal silencioso y muy cauteloso, que caza sobre todo por la noche. Durante el dia permanece oculto entre los matorrales o en sus madrigueras, excavadas en parajes secos y escondidos, a menudo entre las rocas, los barrancos herbosos y las espesuras."
+perro5 = "El dingo es una subespecie de lobo propia de Australasia, probablemente descendiente del lobo asiatico , el dingo es comunmente descrito como un perro salvaje australiano, pero no se limita a Australia y tampoco es originario de ahi."
+
 data = [
     Animal(
-        name='Vaquita Marina',
-        descripcion=vaca,
-        urlImage='./img/vaca.png'),
-    Animal(
         name='Perro',
-        descripcion='Texto de descripcion del animal Perro',
-        urlImage='./img/mastin.png'
+        descripcion=perro1,
+        urlImage='./img/perro.png'),
+    Animal(
+        name='Zorro Artico',
+        descripcion=perro2,
+        urlImage='./img/artico.png'
     ),
+    Animal(
+        name='Lobo',
+        descripcion=perro3,
+        urlImage='./img/lobo.png'),
+    Animal(
+        name='Zorro Comun',
+        descripcion=perro4,
+        urlImage='./img/comun.png'
+    ),
+    Animal(
+        name='Dingo',
+        descripcion=perro5,
+        urlImage='./img/dingo.png')
 ]
 data2 = [
     Animal(
@@ -117,9 +136,13 @@ class PestañaAnimal(tk.Frame):
         self.config(bg = grisOscuro)
         self.pack()
 
-        self.title = tk.Label(self, text = 'No tenemos Nombre')
+        self.title = tk.Label(self, text = 'Analisis Proteico')
         self.title.config(anchor = tk.CENTER, pady= 20, bg = grisOscuro, font= 1, fg = 'white', width = 80)
         self.title.place(x = 0 , y = 0)
+
+        self.title2 = tk.Label(self, text = ">> Seleccione la especie a estudiar :")
+        self.title2.config(pady= 20, bg = grisOscuro, font= 1, fg = 'white', width = 80)
+        self.title2.place(x = 0 , y = 50)
 
         """ MODIFICAR ESTE ARRAY SIMPLE CON UNA ARRAY DE OBJETOS ANIMALES """
         self.listBox = ListBox(self)

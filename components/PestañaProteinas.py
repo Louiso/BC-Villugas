@@ -15,9 +15,9 @@ data = [
     Proteina(
         name='Cry4',
         descripcion=cry4
-        )
-    
+        )  
 ]
+
 data2 = [
     Proteina(
         name='Tmie',
@@ -49,9 +49,13 @@ class PestañaProteinas(tk.Frame):
         self.config(bg = grisOscuro)
         self.pack()
 
-        self.title = tk.Label(self, text = 'No tenemos Nombre')
+        self.title = tk.Label(self, text = 'Ananlisis Proteico')
         self.title.config(anchor = tk.CENTER, pady= 20, bg = grisOscuro, font= 1, fg = 'white', width = 80)
         self.title.place(x = 0 , y = 0)
+
+        self.title2 = tk.Label(self, text = ">> Seleccione la proteina a estudiar :")
+        self.title2.config(pady= 20, bg = grisOscuro, font= 1, fg = 'white', width = 80)
+        self.title2.place(x = 0 , y = 50)
 
         """ MODIFICAR ESTE ARRAY SIMPLE CON UNA ARRAY DE OBJETOS ANIMALES """
         self.listBox = ListBox(self)
