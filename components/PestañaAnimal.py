@@ -4,7 +4,8 @@ from components.Detalles import Detalles
 from helpers.colors import grisOscuro
 from models.Animal import Animal
 from components.ClaseBiologia import ClaseBiologia
-
+from components.ClaseAyuda import ClaseAyuda
+from components.dialogo import dialogo
 
 perro = Animal(descripcion='Este es perro', urlImage='./img/perro_1.png')
 
@@ -146,6 +147,15 @@ class PestañaAnimal(tk.Frame):
 
         """ MODIFICAR ESTE ARRAY SIMPLE CON UNA ARRAY DE OBJETOS ANIMALES """
         self.listBox = ListBox(self)
+
+        self.ayuda = ClaseAyuda(
+            root = self,
+            file = './img/ayuda.png',
+            text = "Help",
+            x= 30,
+            y=20
+        )
+
         self.caninos = ClaseBiologia(
             root = self,
             file = './img/mastin.png',
@@ -183,6 +193,7 @@ class PestañaAnimal(tk.Frame):
         )
 
         self.detalles = Detalles(root = self)
+        self.dialogo = dialogo(root = self)
 
     def handleClickImage(self,e,data):
         self.listBox.delete(0,tk.END)
@@ -198,3 +209,9 @@ class PestañaAnimal(tk.Frame):
 
     def handleBackDetalles(self,e):
         self.detalles.place_forget()
+
+    def handleBackDetalles2(self,e):
+        self.dialogo.place_forget()
+
+    def handleClickImage2(self,e,data):
+        self.dialogo.place(x = 80, y = 65)    
