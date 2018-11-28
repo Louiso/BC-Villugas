@@ -1,6 +1,8 @@
 import tkinter as tk
 from components.ListBox import ListBox
 from components.Detallesp import Detalles
+from components.dialogo import dialogo
+from components.ClaseAyuda import ClaseAyuda
 from helpers.colors import grisOscuro
 from models.Animal import Animal
 from components.ClaseBiologia import ClaseBiologia
@@ -59,6 +61,15 @@ class PestañaProteinas(tk.Frame):
 
         """ MODIFICAR ESTE ARRAY SIMPLE CON UNA ARRAY DE OBJETOS ANIMALES """
         self.listBox = ListBox(self)
+        
+        self.ayuda = ClaseAyuda(
+            root = self,
+            file = './img/ayuda.png',
+            text = "Help",
+            x= 30,
+            y=20
+        )
+        
         self.caninos = ClaseBiologia(
             root = self,
             file = './img/cry41.png',
@@ -96,6 +107,7 @@ class PestañaProteinas(tk.Frame):
         )
 
         self.detalles = Detalles(root = self)
+        self.dialogo = dialogo(root = self,imagen="./img/guia2.png")
 
     def handleClickImage(self,e,data):
         #self.listBox.delete(0,tk.END)
@@ -116,3 +128,9 @@ class PestañaProteinas(tk.Frame):
 
     def handleBackDetalles(self,e):
         self.detalles.place_forget()
+    
+    def handleBackDetalles2(self,e):
+        self.dialogo.place_forget()
+
+    def handleClickImage2(self,e,data):
+        self.dialogo.place(x = 80, y = 65)

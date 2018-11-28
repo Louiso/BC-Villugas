@@ -1,9 +1,9 @@
 import tkinter as tk
 from tkinter import ttk
-from components.PestañaAnimal import PestañaAnimal
-from components.PestañaProteinas import PestañaProteinas
-from components.PestañaAnalisis import PestañaAnalisis
-
+from pestañas.PestañaAnimal import PestañaAnimal
+from pestañas.PestañaProteinas import PestañaProteinas
+from pestañas.PestañaAnalisis import PestañaAnalisis
+ 
 root = tk.Tk()
 root.title("Biologia Computacional")
 

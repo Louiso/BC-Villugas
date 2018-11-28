@@ -193,7 +193,7 @@ class PestañaAnimal(tk.Frame):
         )
 
         self.detalles = Detalles(root = self)
-        self.dialogo = dialogo(root = self)
+        self.dialogo = dialogo(root = self,imagen="./img/guia1.png")
 
     def handleClickImage(self,e,data):
         self.listBox.delete(0,tk.END)
