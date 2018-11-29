@@ -2,10 +2,14 @@ import tkinter as tk
 from components.ListBox import ListBox
 from components.detallesA import detallesA
 from botones.boton import Boton
+from botones.bAlinear import bAlinear
 from helpers.colors import grisOscuro
 from models.Animal import Animal
 from components.ClaseAnalisis import ClaseAnalisis
 from components.arbolG import Arbol
+
+import subprocess
+from Bio.Align.Applications import MuscleCommandline
 
 data = [
     Animal(
@@ -205,13 +209,14 @@ class PestañaAnalisis(tk.Frame):
         )
 
         self.detalles = detallesA(root = self)
-
-        #self.arbol = tk.Button(self, text = 'Arbol')
-        #self.arbol.place(x = 150, y = 540)
-        #self.arbol.bind('<Button-1>', lambda e: root.handleBackDetalles(e))
-
-        self.alineamiento = Boton(root = self,text="Alineamiento", x = 150,y = 540)
+        
+        self.alineamiento = bAlinear(root = self,text="Alineamiento", x = 150,y = 540)
         self.arbol = Boton(root = self,text = "Arbol", x = 450,y = 540)
+        
+        self.file = open("alinear.fasta","w")
+
+    def leerArchivo(self,url):    
+        return url
 
     def handleClickImage(self,e,data):
         self.listBox.delete(0,tk.END)
@@ -221,9 +226,19 @@ class PestañaAnalisis(tk.Frame):
     
     def handleListBoxSelect(self,e,data):
         index = self.listBox.curselection()[0]
+        string = "./fasta/"+str(data[index].proteina) +"/seq"+ str(index) + ".fasta"
+        #string = "./fasta/aves/seq1.fasta"
+        file2 = open(string,"r")
+        fasta = ""
+        for line in file2:
+            fasta += line 
+        fasta = fasta + "\n\n"
+        file2.close()    
+        self.file.write(fasta)    
         self.detalles.nom(objeto= data[index])
         self.detalles.setDescription(objeto= data[index])
         self.detalles.place(x = 245, y = 250)
+        #self.generaAln()
         self.arbol.proteina = data[index].proteina        
 
     def handleBackDetalles(self,e):
@@ -231,3 +246,11 @@ class PestañaAnalisis(tk.Frame):
 
     def imprime(self,e,proteina):
         arbol = Arbol(proteina = proteina)
+        self.file.close()
+
+    def generaAln(self):
+        self.file.close()
+        cline = MuscleCommandline(input ="alinear.fasta",out="arbol.aln",clw=True)
+        string = str(cline)
+        subprocess.call(string, shell=True)
+        
