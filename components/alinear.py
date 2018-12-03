@@ -6,5 +6,7 @@ class alinear():
     def __init__(self):
 
         self.cline = MuscleCommandline(input ="alinear.fasta",out="arbol.aln",clw=True)
-        self.string = str(self.cline)
+        self.string = str(self.cline) + "&"
+        subprocess.call("gedit alinear.fasta", shell=True)
         subprocess.call(self.string, shell=True)
+        

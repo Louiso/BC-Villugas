@@ -3,10 +3,13 @@ from components.ListBox import ListBox
 from components.detallesA import detallesA
 from botones.boton import Boton
 from botones.bAlinear import bAlinear
+from botones.bClear import bClear
 from helpers.colors import grisOscuro
 from models.Animal import Animal
 from components.ClaseAnalisis import ClaseAnalisis
+from components.ClaseAyuda import ClaseAyuda
 from components.arbolG import Arbol
+from components.dialogo import dialogo
 
 import subprocess
 from Bio.Align.Applications import MuscleCommandline
@@ -172,6 +175,15 @@ class PestañaAnalisis(tk.Frame):
         """ MODIFICAR ESTE ARRAY SIMPLE CON UNA ARRAY DE OBJETOS ANIMALES """
         self.listBox = ListBox(self,w = 26, h = 20 ,px=43,py=250)
         #self.fasta = 
+
+        self.ayuda = ClaseAyuda(
+            root = self,
+            file = './img/ayuda.png',
+            text = "Help",
+            x= 720,
+            y=15
+        )
+
         self.caninos = ClaseAnalisis(
             root = self,
             file = './img/mastin.png',
@@ -210,9 +222,10 @@ class PestañaAnalisis(tk.Frame):
 
         self.detalles = detallesA(root = self)
         
-        self.alineamiento = bAlinear(root = self,text="Alineamiento", x = 150,y = 540)
-        self.arbol = Boton(root = self,text = "Arbol", x = 450,y = 540)
-        
+        self.alineamiento = bAlinear(root = self,text="Alineamiento", x = 50,y = 540)
+        self.arbol = Boton(root = self,text = "Arbol", x = 350,y = 540)
+        self.clear = bClear(root =self,text = "Clear", x = 550,y = 540)
+        self.dialogo = dialogo(root = self,imagen="./img/ayuda3.png")
         self.file = open("alinear.fasta","w")
 
     def leerArchivo(self,url):    
@@ -239,7 +252,8 @@ class PestañaAnalisis(tk.Frame):
         self.detalles.setDescription(objeto= data[index])
         self.detalles.place(x = 245, y = 250)
         #self.generaAln()
-        self.arbol.proteina = data[index].proteina        
+        self.arbol.proteina = data[index].proteina
+                
 
     def handleBackDetalles(self,e):
         self.detalles.place_forget()
@@ -253,4 +267,14 @@ class PestañaAnalisis(tk.Frame):
         cline = MuscleCommandline(input ="alinear.fasta",out="arbol.aln",clw=True)
         string = str(cline)
         subprocess.call(string, shell=True)
-        
+        subprocess.call("gedit alinear.fasta", shell=True)
+
+    def limpia(self):
+        self.detalles.borrar()
+        self.file = open("alinear.fasta","w")
+
+    def handleBackDetalles2(self,e):
+        self.dialogo.place_forget()
+
+    def handleClickImage2(self,e,data):
+        self.dialogo.place(x = 80, y = 65)    

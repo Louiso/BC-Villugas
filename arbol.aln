@@ -1,65 +1,32 @@
 MUSCLE (3.8) multiple sequence alignment
 
 
-AEL96831.1          ---------------------------------AMSVIIRVELGQVGSLLGDDHLYNVIV
-ATI15533.1          --------------------------------------------QPGTLIGNDQIYNVIV
-ADK41046.1          --------------------------------------------------GDDQIYNVVV
-ALD10489.1          ------------------TMYLILGGWASMVGTALSLLIRAELGSPGSFIGDDQIYNVIV
-XP_010765930.1      ------------------------------------------------MFGDQ-----PV
-XP_007168911.1      ------------------------------------------------MAGQR-----LG
-XP_007126150.2      MMPTRSLPATRSPPPSAGWPGGSHRAKAARQASLGSPDLLPSCAERAKMAGQR-----LG
-                                                                      *:        
+ATI15533.1      ------------------------------QPGTLIGNDQIYNVIVTAHAFIMIFFMVMP
+BBG56591.1      KDIGTLYLVFGAWAAMVGTAMSVLIRIELGQTGSFMGDDQLYNVIVTAHAFVMIFFMVMP
+AEL96831.1      -------------------AMSVIIRVELGQVGSLLGDDHLYNVIVTAHALVMIFFMVMP
+                                              * *:::*:*::*********::********
 
-AEL96831.1          TAHALVMIFFMVMPILIGGFGNWMLPLMLGAPDM--AFPRMN-------NLSFWLLPPSL
-ATI15533.1          TAHAFIMIFFMVMPIMIGGFGNWLVPIMLGAPDM--AFPRMN-------NMSFWLLPPSL
-ADK41046.1          TAHAFVMIFFMVMPVMIGGFGNWLVPLMLGAPDM--AFPRLN-------NMSFWLLPPAF
-ALD10489.1          TAHAFVMIFFMVMPVMIGGFGNWLVPLMLGAPDM--AFPRLN-------NMSFWLLPPAF
-XP_010765930.1      CPSQPLLRGALLLSQCLSSVFSQVPDPELLPTDPPKKPDPITSESVVFWGLRLWQVIAIF
-XP_007168911.1      AGPLWALGGGAALGVCLAGVAGQLVEPSTAPPKP--KPPPLTKETVVFWDMRLWHVVGIF
-XP_007126150.2      AGPLWAL-GGAALGVCLAGVAGQLVEPSTAPPKP--KPPPLTKETVVFWDMRLWHVVGIF
-                          :     :   :... ..:      ...       :.       .: :* :   :
+ATI15533.1      IMIGGFGNWLVPIMLGAPDMAFPRMNNMSFWLLPPSLCLLINSSLVESGAGTGWTVYPPL
+BBG56591.1      ILIGGFGNWLVPLMLGAPDMAFPRMNNLSFWLLPPSLLLLFISSMVEMGVGAGWTVYPPL
+AEL96831.1      ILIGGFGNWMLPLMLGAPDMAFPRMNNLSFWLLPPSLFLLILSSLTDVGVGAGWTIYPPL
+                *:*******::*:**************:********* **: **:.: *.*:***:****
 
-AEL96831.1          FLLILSSLTDVGVGAGWTIYPPLSSFVGHSGGGMDFAIFSLHLAGA-SSIMGSVNFISTI
-ATI15533.1          CLLINSSLVESGAGTGWTVYPPLSSNLSHYGPSVDMAIFSLHLAGA-SSILGSINFITTI
-ADK41046.1          FMLLGSAALESGAGTGWTVYPPLSSYMFHSGGSVDMTIFSLHLAGV-SSILGAINFITTI
-ALD10489.1          FLLLGSASLESGAGTGWTVYPPLSSYMFHSGGSVDMTIFSLHLAGV-SSILGAINFITTI
-XP_010765930.1      SVFVLAIII--------TLCCIFKCRIPRTKKEIEARNVQRQAAKKYANTLETVPPLNEL
-XP_007168911.1      SLFVLSIII--------TLCCVFNCRVPRTRKEIEARYLQRKAAKMYTDKLETVPPLNEL
-XP_007126150.2      SLFVLSIII--------TLCCVFNCRVPRTRKEIEARYLQRKAAKMYTDKLETVPPLNEL
-                     ::: :           *:   :.. : .    ::   .. : *   :. : ::  :. :
+ATI15533.1      SSNLSHYGPSVDMAIFSLHLAGASSILGSINFITTIINMRSIGMTMERIPLFVWSVLTTT
+BBG56591.1      SSLDGHGGSSVDFAIFSLHLAGASSIMGAVNFISTVLNMRSYGMSMEKVPLFVWSVLITA
+AEL96831.1      SSFVGHSGGGMDFAIFSLHLAGASSIMGSVNFISTILNMRGMGMSMDRVPLFVWSVLVTT
+                **  .* * .:*:*************:*::***:*::***. **:*:.:******** *:
 
-AEL96831.1          LNMRGMGMSMDRVPLFVWSVLVTTVLLLLSLPVLAGAITMLLSDRNFNTSFFDPAGGGDP
-ATI15533.1          INMRSIGMTMERIPLFVWSVLTTTILLLLSLPVLAGAITMLLTDRNFN------------
-ADK41046.1          LNMRSYGMLLERVPLFVWSVKITAILLLLSLPVLAGAITMLLTDRNFNTSFFDPAGGG--
-ALD10489.1          INMRSEGLLLERMPLFVWSVSVTAVLLLLSLPVLAGAITMLLTDRNFNTSFFDPAGGGDP
-XP_010765930.1      TEIPGSAPDASAVQTVSEQVQTQS--------ATGSQLSIVRVSEEQPGSLTLPETG---
-XP_007168911.1      TEIPGEDKKKKKKK------------------DSVDTVAIKVEEDEKNEAKKKKEEK---
-XP_007126150.2      TEIPGEGKKKKKK-------------------DSVDTVAIKVEEDEKNEAKKKKEGK---
-                     :: .     .                        . :::   . :              
+ATI15533.1      ILLLLSLPVLAGAITMLLTDRNFN------------------------------------
+BBG56591.1      VLLLLSLPVLAGAITMLLTDRNFNTSFFDPAGGGDPILFQHLFWFFGH------------
+AEL96831.1      VLLLLSLPVLAGAITMLLSDRNFNTSFFDPAGGGDPVLFQHLFWFFGHPEVYILILPGFG
+                :*****************:*****                                    
 
-AEL96831.1          VLFQHLFWFFGHPEVYILILPGFGMISHIISSSVGKREVFGSLGMIYAMVSIGGMGFVVW
-ATI15533.1          ------------------------------------------------------------
-ADK41046.1          ------------------------------------------------------------
-ALD10489.1          ILYQHLFWFFGHPEVYILILPGFGMVSHVISHHTGKKEPFGALGMVYALVAIGFLGFVVW
-XP_010765930.1      ------------------------------------------------------------
-XP_007168911.1      ------------------------------------------------------------
-XP_007126150.2      ------------------------------------------------------------
-                                                                                
+ATI15533.1      ------------------------------------------------------------
+BBG56591.1      ------------------------------------------------------------
+AEL96831.1      MISHIISSSVGKREVFGSLGMIYAMVSIGGMGFVVWAHHMFSVGMDVDTRAYFTAATMVI
+                                                                            
 
-AEL96831.1          AHHMFSVGMDVDTRAYFTAATMVIAVPTGIKVFSWMATLYGSYFSMDVSLMWCVGFVFLF
-ATI15533.1          ------------------------------------------------------------
-ADK41046.1          ------------------------------------------------------------
-ALD10489.1          AHHMFTVGMDVDTRAYFTAATMVIAVPTGIKIFSWLATIHGSYFDYSPPLLWALGFVFLF
-XP_010765930.1      ------------------------------------------------------------
-XP_007168911.1      ------------------------------------------------------------
-XP_007126150.2      ------------------------------------------------------------
-                                                                                
-
-AEL96831.1          TMGG-----------------------
-ATI15533.1          ---------------------------
-ADK41046.1          ---------------------------
-ALD10489.1          TVGGLTGVILANSSLDIVLHDTYYVVA
-XP_010765930.1      ---------------------------
-XP_007168911.1      ---------------------------
-XP_007126150.2      ---------------------------
-                                               
+ATI15533.1      ----------------------------------------
+BBG56591.1      ----------------------------------------
+AEL96831.1      AVPTGIKVFSWMATLYGSYFSMDVSLMWCVGFVFLFTMGG
+                                                        

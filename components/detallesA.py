@@ -29,6 +29,9 @@ class detallesA(tk.Frame):
         #self.descripcion.delete('1.0',tk.END)
         self.descripcion.insert(tk.INSERT, "\n\n"+ objeto.fasta)
 
+    def borrar(self):
+        self.descripcion.delete('1.0',tk.END)
+
     def nom(self,objeto = Animal()):
         self.label = tk.Label(self, text = objeto.proteina)
         self.label.config(anchor = tk.CENTER, pady= 5, bg = 'gray', width = 77)

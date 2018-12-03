@@ -32,7 +32,7 @@ class Detalles(tk.Frame):
         self.button.bind('<Button-1>', lambda e: root.handleBackDetalles(e))
 
     def setDescription(self,objeto = Animal()):
-        print(objeto.urlImage)
+        #print(objeto.urlImage)
         self.photo = tk.PhotoImage(file = objeto.urlImage)
         self.photo = resize( self.photo, 120 , 120 )
         self.labelPhoto.config(image = self.photo)
